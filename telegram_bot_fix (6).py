@@ -1207,6 +1207,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
 
     init_books()
+    TOKEN="8232601370:AAGploAq_byjeWEJj9g2EtydsL0U_hRSw7w"
 
     application = Application.builder().token(TOKEN).build()
 
