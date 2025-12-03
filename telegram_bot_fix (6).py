@@ -5,7 +5,6 @@ import json
 import os
 from datetime import datetime
 
-
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -190,7 +189,6 @@ async def profile_region(update: Update, context: ContextTypes.DEFAULT_TYPE):
     users[str(user.id)]['region'] = region
     save_data(USERS_FILE, users)
 
-    await update.message.reply_text("Tumaningiz nomini kiriting:")
     return PROFILE_DISTRICT
 
 async def profile_district(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -201,7 +199,6 @@ async def profile_district(update: Update, context: ContextTypes.DEFAULT_TYPE):
     users[str(user.id)]['district'] = district
     save_data(USERS_FILE, users)
 
-    await update.message.reply_text("Qishloqingiz nomini kiriting:")
     return PROFILE_VILLAGE
 
 async def profile_village(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1208,7 +1205,6 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 def main():
-    TOKEN = "8232601370:AAGploAq_byjeWEJj9g2EtydsL0U_hRSw7w"
 
     init_books()
 
